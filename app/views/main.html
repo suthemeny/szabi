@@ -1,24 +1,33 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
-
-<div class="row">
-    <ul>
-        <li ng-repeat="holiday in $storage.holidays">
-            <label>From:</label>
+<table>
+    <tr>
+        <th>
+            <a href="" ng-click="predicate='from'">From</a>
+        </th>
+        <th>
+            <a href="" ng-click="predicate='to'">To</a>
+        </th>
+        <th>
+            <a href="" ng-click="predicate='type'">Category</a>
+        </th>
+        <th></th>
+    </tr>
+    <tr ng-repeat="holiday in $storage.holidays | orderBy:predicate:false">
+        <td>
             <input type="date" ng-model="holiday.from"/>
-            <label>to:</label>
+        </td>
+        <td>
             <input type="date" ng-model="holiday.to"/>
-            <label>category:</label>
+        </td>
+        <td>
             <select ng-model="holiday.type" ng-options="category for category in $storage.categories"></select>
+        </td>
+        <td>
             [<a href ng-click="$storage.holidays.splice($index, 1)">X</a>]
-        </li>
-        <li>
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4">
             [<a href ng-click="$storage.holidays.push({})">add</a>]
-        </li>
-    </ul>
-</div>
+        </td>
+    </tr>
+</table>
