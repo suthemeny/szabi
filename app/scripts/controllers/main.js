@@ -8,10 +8,13 @@
  * Controller of the szabiApp
  */
 angular.module('szabiApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('MainCtrl', ['$scope', '$localStorage', function ($scope, $localStorage) {
+    $scope.$storage = $localStorage.$default({
+        categories: [
+            'public holiday',
+            'vacation',
+            'extra workday'
+        ],
+        holidays:[{}]
+    });
+  }]);
