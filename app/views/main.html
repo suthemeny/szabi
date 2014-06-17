@@ -1,4 +1,24 @@
-<table>
+<div class="panel panel-default" ng-init="open = true">
+    <div class="panel-heading">
+        <button type="button" class="btn btn-default" ng-click="open = !open">
+            <span ng-class="open ? 'glyphicon glyphicon-collapse-up' : 'glyphicon glyphicon-expand'"></span>
+        </button>
+        <span class="panel-title">Basic Settings</span>
+    </div>
+    <div ng-class="open ? 'panel-body ng-show' : 'panel-body ng-hide'">
+        <form role="form">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" type="text" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label for="project">Project:</label>
+                <input id="project" type="text" class="form-control"/>
+            </div>
+        </form>
+    </div>
+</div>
+<table class="table table-bordered">
     <tr>
         <th>
             <a href="" ng-click="predicate='from'">From</a>
