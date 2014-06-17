@@ -22,12 +22,16 @@
             <select ng-model="holiday.type" ng-options="category for category in $storage.categories"></select>
         </td>
         <td>
-            [<a href ng-click="$storage.holidays.splice($index, 1)">X</a>]
+            <button type="button" class="btn btn-default" ng-click="$storage.holidays.splice($index, 1)">
+                <span class="glyphicon glyphicon-remove"></span> Remove
+            </button>
         </td>
     </tr>
     <tr>
         <td colspan="4">
-            [<a href ng-click="$storage.holidays.push({})">add</a>]
+            <button type="button" class="btn btn-default" ng-click="$storage.holidays.push({})">
+                <span class="glyphicon glyphicon-plus"></span> Add
+            </button>
         </td>
     </tr>
 </table>
