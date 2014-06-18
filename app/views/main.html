@@ -9,11 +9,27 @@
         <form role="form">
             <div class="form-group">
                 <label for="name">Name</label>
-                <input id="name" type="text" class="form-control"/>
+                <input id="name" type="text" class="form-control" ng-model="$storage.employee.fullName" required/>
             </div>
             <div class="form-group">
-                <label for="project">Project:</label>
-                <input id="project" type="text" class="form-control"/>
+                <label for="id">ID</label>
+                <input id="id" type="number" class="form-control" ng-model="$storage.employee.id" required/>
+            </div>
+            <div class="form-group">
+                <label for="consType">Consultant type</label>
+                <input id="consType" type="text" class="form-control" ng-model="$storage.employee.type" required/>
+            </div>
+            <div class="form-group">
+                <label for="clientProj">Client project</label>
+                <input id="clientProj" type="text" class="form-control" ng-model="$storage.employee.clientProject" required/>
+            </div>
+            <div class="form-group">
+                <label for="project">Project</label>
+                <input id="project" type="text" class="form-control" ng-model="$storage.employee.project" required/>
+            </div>
+            <div class="form-group">
+                <label for="clientMgr">Client manager</label>
+                <input id="clientMgr" type="text" class="form-control" ng-model="$storage.employee.clientManager" required/>
             </div>
         </form>
     </div>
