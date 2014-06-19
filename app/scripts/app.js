@@ -24,6 +24,10 @@ angular
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/timesheet/:month', {
+        templateUrl: 'views/timesheet.html',
+        controller: 'TimesheetCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

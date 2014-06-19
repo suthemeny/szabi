@@ -24,17 +24,15 @@
     <div class="container">
       <div class="header" ng-if="!fullScreen">
         <ul class="nav nav-pills pull-right" ng-init="months=['January','February','March','April','May','June','July','August','September','October','November','December']">
-          <li class="active"><a ng-href="#">Home</a></li>
+          <li class="active"><a ng-href="#/">Home</a></li>
           <li class="dropdown">
               <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                Table 1 <span class="caret"></span>
+                Timesheet <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
-                  <li ng-repeat="month in months"><a ng-href="#/table1/{{$index}}">{{month}}</a></li>
+                  <li ng-repeat="month in months"><a ng-href="#/timesheet/{{$index}}">{{month}}</a></li>
               </ul>
           </li>
-          <li><a ng-href="#/holiday">Holidays</a></li>
-          <li><a ng-href="#">Contact</a></li>
         </ul>
         <h3 class="text-muted">szabi</h3>
       </div>
@@ -78,6 +76,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/timesheet.js"></script>
         <!-- endbuild -->
 </body>
 </html>

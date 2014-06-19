@@ -1,11 +1,11 @@
-<div class="panel panel-default" ng-init="open = true">
+<div class="panel panel-default">
     <div class="panel-heading">
-        <button type="button" class="btn btn-default" ng-click="open = !open">
-            <span ng-class="open ? 'glyphicon glyphicon-collapse-up' : 'glyphicon glyphicon-expand'"></span>
+        <button type="button" class="btn btn-default" ng-click="$storage.showEmployeeSettings = !$storage.showEmployeeSettings">
+            <span ng-class="$storage.showEmployeeSettings ? 'glyphicon glyphicon-collapse-up' : 'glyphicon glyphicon-expand'"></span>
         </button>
         <span class="panel-title">Basic Settings</span>
     </div>
-    <div ng-class="open ? 'panel-body ng-show' : 'panel-body ng-hide'">
+    <div ng-class="$storage.showEmployeeSettings ? 'panel-body ng-show' : 'panel-body ng-hide'">
         <form role="form">
             <div class="form-group">
                 <label for="name">Name</label>
