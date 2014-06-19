@@ -8,7 +8,7 @@
  * Controller of the szabiApp
  */
 angular.module('szabiApp')
-  .controller('MainCtrl', ['$scope', '$localStorage', function ($scope, $localStorage) {
+  .controller('MainCtrl', ['$scope', '$rootScope', '$localStorage', function ($scope, $rootScope, $localStorage) {
     $scope.$storage = $localStorage.$default({
         showEmployeeSettings: true,
         categories: [
@@ -20,4 +20,5 @@ angular.module('szabiApp')
         ],
         holidays:[{}]
     });
+    $rootScope.fullScreen = false;
   }]);

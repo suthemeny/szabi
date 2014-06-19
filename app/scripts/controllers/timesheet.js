@@ -34,6 +34,5 @@ angular.module('szabiApp')
       $scope.days.push({date:new Date(day.getTime()), type: type, isWorkday: isWorkday});
       day.setDate(day.getDate() + 1);
     } while (day.getDate() > 1);
-    $rootScope.fullscreen = true;
-    // $rootScope.apply();
+    $rootScope.fullScreen = true;
   }]);
