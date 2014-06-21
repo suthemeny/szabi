@@ -28,6 +28,10 @@ angular
         templateUrl: 'views/timesheet.html',
         controller: 'TimesheetCtrl'
       })
+      .when('/attendancesheet/:month', {
+        templateUrl: 'views/attendancesheet.html',
+        controller: 'AttendancesheetCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

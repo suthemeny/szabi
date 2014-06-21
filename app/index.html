@@ -26,11 +26,19 @@
         <ul class="nav nav-pills pull-right" ng-init="months=['January','February','March','April','May','June','July','August','September','October','November','December']">
           <li class="active"><a ng-href="#/">Home</a></li>
           <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+              <a class="dropdown-toggle" data-toggle="dropdown">
                 Timesheet <span class="caret"></span>
               </a>
               <ul class="dropdown-menu">
                   <li ng-repeat="month in months"><a ng-href="#/timesheet/{{$index}}">{{month}}</a></li>
+              </ul>
+          </li>
+          <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown">
+                Attendance sheet <span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu">
+                  <li ng-repeat="month in months"><a ng-href="#/attendancesheet/{{$index}}">{{month}}</a></li>
               </ul>
           </li>
         </ul>
@@ -77,6 +85,7 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/timesheet.js"></script>
+        <script src="scripts/controllers/attendancesheet.js"></script>
         <!-- endbuild -->
 </body>
 </html>
