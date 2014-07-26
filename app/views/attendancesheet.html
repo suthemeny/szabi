@@ -630,7 +630,7 @@ tags will be replaced.-->
   <td class=xl719837 style='border-top:none;border-left:none'>{{day.isWorkday ? '8' : '-'}}</td>
   <td class=xl719837 style='border-top:none;border-left:none'>&nbsp;</td>
   <td class=xl719837 style='border-top:none;border-left:none'>&nbsp;</td>
-  <td class=xl729837 style='border-top:none;border-left:none'>{{day.isWorkday ? '09:00-18:00' : '&nbsp;'}}</td>
+  <td class=xl729837 style='border-top:none;border-left:none'>{{day.isWorkday ? '09:00-18:00' : day.type === 'weekend' ? '&nbsp;' : day.type}}</td>
   <td class=xl849837 style='border-left:none'>&nbsp;</td>
   <td class=xl159837></td>
  </tr>
@@ -659,7 +659,7 @@ tags will be replaced.-->
  </tr>
  <tr height=17 style='mso-height-source:userset;height:12.75pt'>
   <td height=17 class=xl829837 style='height:12.75pt'>Holiday</td>
-  <td class=xl789837>0</td>
+  <td class=xl789837>{{totalVacations * 8}}</td>
   <td class=xl789837>&nbsp;</td>
   <td class=xl789837>&nbsp;</td>
   <td class=xl789837>&nbsp;</td>

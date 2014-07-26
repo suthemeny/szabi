@@ -18,6 +18,7 @@ angular.module('szabiApp')
     $scope.month = selectedDate;
     $scope.days = [];
     $scope.total = 0;
+    $scope.totalVacations = 0;
     var day = new Date(selectedDate.getTime());
     do {
       var type = $scope.$storage.categories[day.getDay() % 6 === 0 ? 1 : 0];
@@ -30,6 +31,8 @@ angular.module('szabiApp')
       var isWorkday = type === $scope.$storage.categories[0] || type === $scope.$storage.categories[4];
       if (isWorkday) {
          ++$scope.total;
+      } else if (type === $scope.$storage.categories[3]) {
+         ++$scope.totalVacations;
       }
       $scope.days.push({date:new Date(day.getTime()), type: type, isWorkday: isWorkday});
       day.setDate(day.getDate() + 1);
